@@ -1,0 +1,2 @@
+libcamera-hello --list-camera
+rpicam-hello --list-camera
