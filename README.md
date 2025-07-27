@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
+    <h2>需求 樹莓派 5 ＋兩顆魚眼鏡頭. <br>Requires Raspberry Pi 5 + two fisheye lenses</h2>
     <ol>
         <li>透過tcp傳送pi camera畫面. <br>Transmit Pi camera images via TCP</li>
         <li>用pc接受畫面 並校正單鏡頭 與 雙鏡頭立體配對. <br>Receive images on PC and calibrate single camera and stereo camera pairing</li>
