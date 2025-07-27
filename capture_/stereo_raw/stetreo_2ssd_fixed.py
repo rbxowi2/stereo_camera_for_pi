@@ -161,6 +161,8 @@ try:
     #儲存剩餘畫面
     save_queue.put(b_point_temp)
     
+    while not save_queue.empty():
+        time.sleep(0.01)
     for i in range(b):
         while lock_b[i]:   # 等待所有塊儲存完
             time.sleep(0.01)
