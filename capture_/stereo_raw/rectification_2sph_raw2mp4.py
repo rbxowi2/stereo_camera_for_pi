@@ -18,7 +18,7 @@ video_codec = 'mp4v'  # 原本設定
 video_quality = 100    # 壓縮品質（0~100，95 為高畫質）
 
 
-w_out_ = 6000  # 對應水平解析度180° 
+w_out_ = 3000  # 對應水平解析度180° 
 
 # ====== 載入 RAW 檔案列表 ======
 raw_files = sorted(glob.glob("frame_*.raw"))
@@ -65,6 +65,7 @@ map1_r, map2_r = cv2.fisheye.initUndistortRectifyMap(K_r, D_r, R2, P2, DIM2, cv2
 
 init_VideoWriter = False
 init_map_ = False
+print("Calculating...")
 try:
     for idx, raw_file in enumerate(raw_files):
         with open(raw_file, "rb") as f:
