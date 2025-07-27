@@ -2,18 +2,34 @@ from picamera2 import Picamera2
 import time
 import socket
 import numpy as np
+import  sys
 
+ScalerCrop_flag = False
 # 影像參數
-resolution = (1296, 972)
+if sys.argv[1] == '1':
+    resolution = (1296, 972)
+    desired_fps = 30
+
+if sys.argv[1] == '2':
+    resolution = (2592, 1944)
+    desired_fps = 15
+
+if sys.argv[1] == '3':
+    resolution=(1944,1944)
+    desired_fps = 15
+    crop_x = 200  # 向右偏移
+    crop_y = 0  # 向上偏移
+    crop_width = 1944
+    crop_height = 1944
+    ScalerCrop_flag = True
+    
+
 frame_width, frame_height = resolution
 channels = 3
 
 # 預先分配記憶體 ( 高, 寬, 通道)
 frames_in_memory = np.empty((frame_height, frame_width*2, channels), dtype=np.uint8)
 
-
-# 設定幀率
-desired_fps = 15
 
 # TCP 伺服器設定
 host = "0.0.0.0"
@@ -36,12 +52,16 @@ picam2a = Picamera2(0)
 camera_config_a = picam2a.create_video_configuration(main={"size": resolution, "format": "RGB888"})
 picam2a.configure(camera_config_a)
 picam2a.set_controls({"FrameDurationLimits": (int(1e6 / desired_fps), int(1e6 / desired_fps))})
+if ScalerCrop_flag:
+    picam2a.set_controls({"ScalerCrop": (crop_x, crop_y, crop_width, crop_height)})
 picam2a.post_callback = post_a_callback
 
 picam2b = Picamera2(1)
 camera_config = picam2b.create_video_configuration(main={"size": resolution, "format": "RGB888"})
 picam2b.configure(camera_config)
 picam2b.set_controls({"FrameDurationLimits": (int(1e6 / desired_fps), int(1e6 / desired_fps))})
+if ScalerCrop_flag:
+    picam2b.set_controls({"ScalerCrop": (crop_x, crop_y, crop_width, crop_height)})
 picam2b.post_callback = post_b_callback
 
 
