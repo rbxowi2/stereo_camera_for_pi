@@ -1,6 +1,6 @@
-1.透過tcp傳送pi camera畫面 
-2.用pc接受畫面 並校正單鏡頭 與 雙鏡頭立體配對
-3.由pi錄製raw畫面 並在pc上轉製
+1. 透過tcp傳送pi camera畫面.  Transmit Pi camera images via TCP  
+2. 用pc接受畫面 並校正單鏡頭 與 雙鏡頭立體配對.  Receive images on PC and calibrate single camera and stereo camera pairing  
+3. 由pi錄製raw畫面 並在pc上轉製.  Record raw images on Pi and convert them on PC  
 
 
 capture_
