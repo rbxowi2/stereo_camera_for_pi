@@ -16,12 +16,12 @@
 
 <pre><code>
 capture_
-├── capture/                         # [資料夾] 儲存拍攝的影像 / Captured data storage
-├── stereo_2ssd_gpio.py             # [Pi] 使用 GPIO 按鈕啟動錄影 / Record stereo with GPIO button
-├── raw/                            # [資料夾] 單鏡頭 raw 檔 / Raw single-camera recordings
-├── player_raw_.py                  # [PC] 播放 raw 檔 / Play raw files
-├── raw_2ssd.py                     # [Pi] 錄製 raw 影像 / Record raw files
-├── stereo_raw/                     # [資料夾] 雙鏡頭 raw 檔 / Stereo raw recordings
+├── capture/                        
+├── stereo_2ssd_gpio.py            # [Pi] 使用 GPIO 按鈕啟動錄影 / Record stereo with GPIO button
+├── raw/                           # [資料夾] 單鏡頭 raw 檔 / Raw single-camera recordings
+├── player_raw_.py                 # [PC] 播放 raw 檔 / Play raw files
+├── raw_2ssd.py                    # [Pi] 錄製 raw 影像 / Record raw files
+├── stereo_raw/                    # [資料夾] 雙鏡頭 raw 檔 / Stereo raw recordings
 ├── play_stereo_raw_.py            # [PC] 播放 stereo raw / Play stereo raw files
 ├── rectification_2sph_raw2mp4.py  # [PC] 轉換為等距柱狀投影並輸出 mp4 / Convert to equirectangular projection using stereo calib
 ├── rectification_raw2mp4.py       # [PC] 校正後輸出 mp4 / Calibrate + rectify stereo and output mp4
@@ -29,7 +29,7 @@ capture_
 ├── stereo_by_ram.py               # [Pi] 使用記憶體緩衝錄製 stereo raw / Record stereo raw using RAM buffer
 
 tcp_
-├── tcp_receive.py                 # [PC] 接收並檢視單鏡頭串流畫面 / View single image stream from Pi
+├── tcp_receive.py                # [PC] 接收並檢視單鏡頭串流畫面 / View single image stream from Pi
 ├── tcp_send_crop.py              # [Pi] 傳送裁切後畫面 / Send cropped single image stream
 ├── tcp_receive_stereo.py         # [PC] 接收 stereo 畫面 / View stereo stream from Pi
 ├── tcp_send_stereo_crop.py       # [Pi] 傳送裁切後 stereo 畫面 / Send cropped stereo stream
