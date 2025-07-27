@@ -56,9 +56,9 @@ def button_callback(channel):
         print("not ready...")
 
 
-GPIO.setwarnings(False) # Ignore warning for now
-GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
-GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+GPIO.setwarnings(False) # 暫時忽略 GPIO 警告
+GPIO.setmode(GPIO.BOARD) # 使用樹莓派的實體針腳編號
+GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # 設定第 10 號針腳為輸入，使用下拉
 
 GPIO.add_event_detect(10, GPIO.RISING, callback=button_callback, bouncetime=200) # 200毫秒消除彈跳
 
