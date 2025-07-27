@@ -70,5 +70,7 @@
         </li>
         <li><strong>virtual_chessboard.py</strong> - 用螢幕顯示棋盤格標定板</li>
     </ul>
+    <h2>範例深度圖 stereo depth example</h2>
+    <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
 </body>
 </html>
