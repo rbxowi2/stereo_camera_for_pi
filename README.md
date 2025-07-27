@@ -20,7 +20,7 @@ tcp_
     tcp_receive.py  在pc執行 檢視pi傳送畫面
     tcp_send_crop.py  在pi執行 傳送畫面
     tcp_receive_stereo.py  在pc執行 檢視pi傳送的stereo畫面
-    tcp_send_stereo_crop.py  在pi執行 傳送畫面
+    tcp_send_stereo_crop.py  在pi執行 傳送stereo畫面
 
 tcp_calib
     tcp_calib.py  在pc執行 校正魚眼單鏡頭  輸出calib校正參數
