@@ -18,7 +18,7 @@ video_codec = 'mp4v'  # 原本設定
 video_quality = 100    # 壓縮品質（0~100，95 為高畫質）
 
 
-w_out_ = 6000  # 對應水平解析度360°  垂直解析度=水平解析度/2  <<注意>>是對應水平360度 不是crop的180度
+w_out_ = 6000  # 對應水平解析度180° 
 
 # ====== 載入 RAW 檔案列表 ======
 raw_files = sorted(glob.glob("frame_*.raw"))
@@ -118,7 +118,7 @@ try:
             
             # === 目標 equirectangular 影像大小（可依需求調整） ===
             w_out = w_out_  # 對應水平360°  ***這裡是對應360度 不是180 crop的***
-            h_out = int(w_out/2)   # 對應垂直180°
+            h_out = w_out_   # 對應垂直180°
             output_img = np.zeros((h_out, w_out, 3), dtype=np.uint8)
             
             # === 為每個像素計算其對應的經緯度（lon, lat） ===
