@@ -157,7 +157,7 @@ try:
             h_in, w_in =l_image.shape[:2]
             
             # === 目標 equirectangular 影像大小（可依需求調整） ===
-            w_out = 5000  # 對應水平360°
+            w_out = w_out_  # 對應水平360°
             h_out = int(w_out/2)   # 對應垂直180°
             output_img = np.zeros((h_out, w_out, 3), dtype=np.uint8)
             
