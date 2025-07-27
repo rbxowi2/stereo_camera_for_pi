@@ -8,7 +8,7 @@
     <h2>需求 樹莓派 5 ＋兩顆魚眼鏡頭. <br>Requires Raspberry Pi 5 + two fisheye lenses</h2>
     <ol>
         <li>透過tcp傳送pi camera畫面. <br>Transmit Pi camera images via TCP</li>
-        <li>用pc接受畫面 並校正單鏡頭 與 雙鏡頭立體配對. <br>Receive images on PC and calibrate single camera and stereo camera pairing</li>
+        <li>用pc接收畫面 並校正單鏡頭 與 雙鏡頭立體配對. <br>Receive images on PC and calibrate single camera and stereo camera pairing</li>
         <li>由pi錄製raw畫面 並在pc上轉製. <br>Record raw images on Pi and convert them on PC</li>
     </ol>
     <h2>目錄結構</h2>
