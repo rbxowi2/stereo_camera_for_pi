@@ -5,13 +5,14 @@
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
-    <h2>需求 樹莓派 5 ＋兩顆魚眼鏡頭. <br>Requires Raspberry Pi 5 + two fisheye lenses</h2>
+    <h2>需求 樹莓派 5 ＋兩顆魚眼鏡頭 <br>Requires Raspberry Pi 5 + two fisheye lenses</h2>
+    <h2>工作流程 Workflow ：</h2>
     <ol>
         <li>透過tcp傳送pi camera畫面. <br>Transmit Pi camera images via TCP</li>
         <li>用pc接收畫面 並校正單鏡頭 與 雙鏡頭立體配對. <br>Receive images on PC and calibrate single camera and stereo camera pairing</li>
         <li>由pi錄製raw畫面 並在pc上轉製. <br>Record raw images on Pi and convert them on PC</li>
     </ol>
-    <h2>目錄結構</h2>
+    <h2>目錄結構 ：</h2>
     <ul>
         <li><strong>capture_</strong>
             <ul>
@@ -70,7 +71,7 @@
         </li>
         <li><strong>virtual_chessboard.py</strong> - 用螢幕顯示棋盤格標定板</li>
     </ul>
-    <h2>範例深度圖 stereo depth example</h2>
+    <h2>範例深度圖 stereo depth example ：</h2>
     <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
 </body>
 </html>
