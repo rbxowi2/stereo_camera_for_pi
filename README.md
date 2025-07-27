@@ -2,7 +2,6 @@
 <html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
-    <title>stereo_camera_for_pi 專案說明</title>
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
