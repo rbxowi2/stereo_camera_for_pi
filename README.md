@@ -74,6 +74,7 @@
     <h2>範例 stereo example ：</h2>
     <!-- 新增GIF範例 -->
     <img src="sph_rectified_output.gif" alt="stereo 180_Equirectangularpth example" width="600">
+    <img src="rectified_output.gif" alt="stereo 180_Equirectangularpth example" width="600">
     <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
 </body>
 </html>
