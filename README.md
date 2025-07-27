@@ -72,11 +72,8 @@
         <li><strong>virtual_chessboard.py</strong> - 用螢幕顯示棋盤格標定板</li>
     </ul>
     <h2>範例 stereo example ：</h2>
-    <!-- 新增影片範例 -->
-    <video width="600" controls>
-         <source src="sph_rectified_output.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放。
-    </video>
+    <!-- 新增GIF範例 -->
+    <img src="sph_rectified_output.gif" alt="stereo 180_Equirectangularpth example" width="600">
     <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
 </body>
 </html>
