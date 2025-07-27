@@ -29,7 +29,7 @@
                 <li>stereo_raw
                     <ul>
                         <li>play_stereo_raw_.py - 在pc執行，播放原始stereo raw檔</li>
-                        <li>rectification_2sph_raw2mp4.py - 在pc執行，轉換到等距投影，搭配stereo calib校正參數，輸出mp4檔</li>
+                        <li>rectification_2sph_raw2mp4.py - 在pc執行，轉換到等距柱狀投影，搭配stereo calib校正參數，輸出mp4檔</li>
                         <li>rectification_raw2mp4.py - 在pc執行，校正配對，輸出mp4檔，搭配stereo calib校正參數</li>
                         <li>stetreo_2ssd_fixed.py - 在pi執行，錄製stereo raw檔，搭配pcie ssd</li>
                         <li>stetreo_by_ram.py - 在pi執行，錄製stereo raw檔</li>
@@ -59,7 +59,7 @@
                                 <li>tcp_rectification_3d_pointcloud.py - 在pc執行，檢視深度圖，搭配stereo calib校正參數，輸出點雲</li>
                                 <li>warp2sph
                                     <ul>
-                                        <li>tcp_rectification_2sph.py - 在pc執行，檢視轉換等距投影，搭配stereo calib校正參數</li>
+                                        <li>tcp_rectification_2sph.py - 在pc執行，檢視轉換等距柱狀投影，搭配stereo calib校正參數</li>
                                     </ul>
                                 </li>
                             </ul>
