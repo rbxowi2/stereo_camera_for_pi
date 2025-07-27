@@ -74,13 +74,6 @@ P2[1,2]=DIM2[1]/2
 
 map1_l, map2_l = cv2.fisheye.initUndistortRectifyMap(K_l, D_l, R1, P1, DIM2, cv2.CV_16SC2)
 map1_r, map2_r = cv2.fisheye.initUndistortRectifyMap(K_r, D_r, R2, P2, DIM2, cv2.CV_16SC2)
-
-def ts(tx,ty):
-    c1=(tx/r)*math.pi*0.5
-    c2=((r-ty)/r)*math.pi*0.5
-    ttx=r*math.cos(c2)*math.cos(c1)
-    tty=r*math.sin(c2)
-    return(ttx,tty)
     
 # ====== TCP 接收 ======
 def recv_all(sock, size):
