@@ -49,6 +49,7 @@ def save_worker():
     while True:
         b_in = save_queue.get()
         if b_in is None:          # 結束訊號
+            save_queue.task_done()
             break
         lock_b[b_in] = 1          # 標記該 block 正在儲存
         for i in range(n):
@@ -160,12 +161,8 @@ try:
     
     #儲存剩餘畫面
     save_queue.put(b_point_temp)
-    
-    while not save_queue.empty():
-        time.sleep(0.01)
-    for i in range(b):
-        while lock_b[i]:   # 等待所有塊儲存完
-            time.sleep(0.01)
+
+    save_queue.join()
     
     # 結束儲存工作執行緒
     save_queue.put(None)

@@ -9,7 +9,7 @@ cv2.namedWindow("recv", cv2.WINDOW_NORMAL)
 if sys.argv[1] == '1':
     frame_width, frame_height = 1296, 972
 if sys.argv[1] == '2':
-    frame_width, frame_height = 2596, 1944
+    frame_width, frame_height = 2592, 1944
 if sys.argv[1] == '3':
     frame_width, frame_height = 1944, 1944
     

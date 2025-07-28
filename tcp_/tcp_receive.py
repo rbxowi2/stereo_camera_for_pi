@@ -1,11 +1,16 @@
 import socket
 import numpy as np
 import cv2
+import sys
+
 cv2.namedWindow("接收畫面", cv2.WINDOW_NORMAL)
 # 影像參數
-#frame_width, frame_height = 1296, 972
-#frame_width, frame_height = 2592, 1944
-frame_width, frame_height = 1944, 1944
+if sys.argv[1] == '1':
+    frame_width, frame_height = 1296, 972
+if sys.argv[1] == '2':
+    frame_width, frame_height = 2592, 1944
+if sys.argv[1] == '3':
+    frame_width, frame_height = 1944, 1944
 channels = 3
 frame_size = frame_width * frame_height * channels
 

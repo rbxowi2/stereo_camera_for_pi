@@ -19,7 +19,7 @@ shift_=True
 
 # ====== 參數與網路設定 ======
 stereo_param_file = "stereo_camera_params.npz"
-server_ip = "192.168.200.39"
+server_ip = "192.168.200.42"
 server_port = 5000
 
 # ====== 載入參數 ======

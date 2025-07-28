@@ -70,6 +70,7 @@ def save_worker():
     while True:
         b_in = save_queue.get()
         if b_in is None:          # 結束訊號
+            save_queue.task_done()
             break
         lock_b[b_in] = 1          # 標記該 block 正在儲存
         for i in range(n):
@@ -185,11 +186,7 @@ try:
             #儲存剩餘畫面
             save_queue.put(b_point_temp)
             
-            while not save_queue.empty():
-                time.sleep(0.01)
-            for i in range(b):
-                while lock_b[i]:   # 等待所有塊儲存完
-                    time.sleep(0.01)
+            save_queue.join()  
                     
             record_flag = 0
             ### set led off
@@ -201,10 +198,12 @@ try:
             # break
             
         elif record_flag == -1: #init 
-            
-            dir_idx += 1
-            dirpath = f"r{dir_idx:03d}"
-            os.mkdir( dirpath, 0o777 );
+            while True:
+                dir_idx += 1
+                dirpath = f"r{dir_idx:03d}"
+                if not os.path.exists(dirpath):
+                    os.mkdir(dirpath, 0o777)
+                    break
             
             frame_count = 0
             n_point = 0
