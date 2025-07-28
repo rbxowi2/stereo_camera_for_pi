@@ -60,11 +60,13 @@ virtual_chessboard.py         # [PC] 顯示虛擬棋盤格供校正使用 / Disp
 </pre>
  <h2>範例 / stereo example :</h2>
     <!-- 新增GIF範例 -->
+    <li> raw : </li>
+    <img src="raw.JPG" alt="raw"width="600" height="300">
     <li> equirectangular projection : </li>
-    <img src="sph_rectified_output.gif" alt="stereo 180_Equirectangularpth example"width="600" height="300">
+    <img src="sph_rectified_output.gif" alt="sph_rectified_output.gif"width="600" height="300">
     <li> undistorted : </li>
-    <img src="rectified_output.gif" alt="stereo 180_Equirectangularpth example"width="600" height="300">
+    <img src="rectified_output.gif" alt="rectified_output.gif"width="600" height="300">
     <li> depth maps : </li>
-    <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
+    <img src="jjgi2ef.jpg" alt="depth maps.jpg" width="600">
 </body>
 </html>
