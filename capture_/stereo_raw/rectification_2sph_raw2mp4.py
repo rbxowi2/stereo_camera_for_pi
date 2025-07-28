@@ -168,7 +168,7 @@ try:
             borderValue=(0, 0, 0)  # 填黑表示超出原圖範圍
         )
         
-        combined_s = np.vstack((res_l, res_r))
+        combined_s = np.hstack((res_l, res_r))
         
         cv2.imshow("combined_f", combined_s)
         
