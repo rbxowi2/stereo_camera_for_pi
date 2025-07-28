@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
-    <h2>需求 樹莓派 5 ＋兩顆魚眼鏡頭 <br>Requires Raspberry Pi 5 + two fisheye lenses</h2>
+    <h2>本專案使用:樹梅派5 8GB,兩顆ov5647魚眼相機模組,pcie ssd  <br>This project uses: Raspberry Pi 5 8GB, two OV5647 fisheye camera modules, and a PCIe SSD.</h2>
     <h2>工作流程 Workflow ：</h2>
     <ol>
         <li>透過tcp傳送pi camera畫面. <br>Transmit Pi camera images via TCP</li>
