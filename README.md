@@ -5,6 +5,9 @@
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
+    <ul>
+      <li>可以隨身攜帶的VR相機 / A portable VR camera</li>
+    </ul>
     <h2>本專案使用 / This project uses :</h2>
     <ul>
         <li>樹梅派 5（8GB） / Raspberry Pi 5 (8GB)</li>
