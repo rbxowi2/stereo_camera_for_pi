@@ -67,7 +67,7 @@ virtual_chessboard.py         # [PC] 顯示虛擬棋盤格供校正使用 / Disp
     <img src="sph_rectified_output.gif" alt="sph_rectified_output.gif"width="600" height="300">
     <li> undistorted : </li>
     <img src="rectified_output.gif" alt="rectified_output.gif"width="600" height="300">
-    <li> depth maps : </li>
+    <li> depth map : </li>
     <img src="dp.gif" alt="dp.gif" width="600">
 </body>
 </html>
