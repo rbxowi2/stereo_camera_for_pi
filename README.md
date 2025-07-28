@@ -32,7 +32,7 @@ capture_/
     stereo_raw/                            
         ├── play_stereo_raw_.py            # [PC] 播放 stereo raw / Play stereo raw files
         ├── rectification_2sph_raw2mp4.py  # [PC] 轉換為等距柱狀投影並輸出 mp4 /Convert to equirectangular projection and output mp4 
-        ├── rectification_dp_2mp4.py       # [PC] 顯示深度圖並輸出 mp4 /Convert to depth maps and output mp4 
+        ├── rectification_dp_2mp4.py       # [PC] 顯示深度圖並輸出 mp4 /Convert to depth map and output mp4 
         ├── rectification_raw2mp4.py       # [PC] 校正後輸出 mp4 / rectified and output mp4 
         ├── stereo_2ssd_fixed.py           # [Pi] 使用 PCIe SSD 錄 stereo raw / Record stereo raw to PCIe SSD
         ├── stereo_by_ram.py               # [Pi] 使用記憶體緩衝錄製 stereo raw / Record stereo raw using RAM buffer
