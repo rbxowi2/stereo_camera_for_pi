@@ -5,19 +5,19 @@
 </head>
 <body>
     <h1>stereo_camera_for_pi 專案說明</h1>
-    <h2>本專案使用 / This project uses:</h2>
+    <h2>本專案使用 / This project uses :</h2>
     <ul>
         <li>樹梅派 5（8GB） / Raspberry Pi 5 (8GB)</li>
         <li>兩顆 OV5647 魚眼相機模組 / Two OV5647 fisheye camera modules</li>
         <li>PCIe SSD </li>
     </ul>
-    <h2>工作流程 Workflow ：</h2>
+    <h2>工作流程 / Workflow :</h2>
     <ol>
         <li>透過tcp傳送pi camera畫面. <br>Transmit Pi camera images via TCP</li>
         <li>用pc接收畫面 並校正單鏡頭 與 雙鏡頭立體配對. <br>Receive images on PC and calibrate single camera and stereo camera pairing</li>
         <li>由pi錄製raw畫面 並在pc上轉製. <br>Record raw images on Pi and convert them on PC</li>
     </ol>
-    <h2>📁 Project Directory Structure / 專案目錄結構</h2>
+    <h2>📁 專案目錄結構 / Project Directory Structure :</h2>
 
 <pre><code>
 capture_/
@@ -55,10 +55,13 @@ virtual_chessboard.py         # [PC] 顯示虛擬棋盤格供校正使用 / Disp
 
 </code>
 </pre>
- <h2>範例 stereo example ：</h2>
+ <h2>範例 / stereo example :</h2>
     <!-- 新增GIF範例 -->
+    <li> equirectangular projection : </li>
     <img src="sph_rectified_output.gif" alt="stereo 180_Equirectangularpth example"width="600" height="300">
+    <li> undistorted : </li>
     <img src="rectified_output.gif" alt="stereo 180_Equirectangularpth example"width="600" height="300">
+    <li> depth maps : </li>
     <img src="jjgi2ef.jpg" alt="stereo depth example" width="600">
 </body>
 </html>
