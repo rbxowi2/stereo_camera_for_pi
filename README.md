@@ -27,7 +27,7 @@ capture_/
     capture/                        
         ├── stereo_ssd_gpio.py            # [Pi] 使用 GPIO 按鈕啟動錄影 / Record stereo with GPIO button
     raw/                                   
-        ├── raw_ssd.py                    # [Pi] 錄製 raw 影像 / Record raw files
+        ├── raw_ram.py                    # [Pi] 使用記憶體緩衝錄製 raw 影像 / Record raw using RAM buffer
         ├── raw_viewer.py                 # [PC] 播放 raw 檔 / Play raw files
     stereo_raw/                            
         ├── rectification_2mp4.py         # [PC] 校正後輸出 mp4 / rectified and output mp4 
@@ -35,7 +35,7 @@ capture_/
         ├── rectification_sph_2mp4.py     # [PC] 轉換為等距柱狀投影並輸出 mp4 /Convert to equirectangular projection and output mp4 
         ├── stereo_raw_viewer.py          # [PC] 播放 stereo raw / Play stereo raw files
         ├── stereo_ram.py                 # [Pi] 使用記憶體緩衝錄製 stereo raw / Record stereo raw using RAM buffer
-        ├── stereo_ssd_fixed.py           # [Pi] 使用 PCIe SSD 錄 stereo raw / Record stereo raw to PCIe SSD
+        ├── stereo_ssd_fixed.py           # [Pi] 使用 PCIe SSD 錄製 stereo raw / Record stereo raw to PCIe SSD
         
 tcp_/
     ├── tcp_receive.py                # [PC] 接收並檢視單鏡頭串流畫面 / View single image stream from Pi
