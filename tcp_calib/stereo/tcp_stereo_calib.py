@@ -193,9 +193,9 @@ try:
                     imgpoints_l.pop()
                     imgpoints_r.pop()
 
-            # cv2.drawChessboardCorners(gray[:, :frame_width], CHECKERBOARD, corners_l, ret_l)
-            # cv2.drawChessboardCorners(gray[:, frame_width:], CHECKERBOARD, corners_r, ret_r)
-        # cv2.imshow("123", gray)
+            cv2.drawChessboardCorners(gray[:, :frame_width], CHECKERBOARD, corners2_l, ret_l)
+            cv2.drawChessboardCorners(gray[:, frame_width:], CHECKERBOARD, corners2_r, ret_r)
+        cv2.imshow("v", gray)
         key = cv2.waitKey(1) & 0xFF
         #time.sleep(0.01)
 

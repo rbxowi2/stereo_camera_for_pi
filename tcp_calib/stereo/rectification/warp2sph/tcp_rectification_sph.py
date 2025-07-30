@@ -158,11 +158,11 @@ try:
             
             # === 目標 equirectangular 影像大小（可依需求調整） ===
             w_out = w_out_  # 對應水平360°
-            h_out = int(w_out/2)   # 對應垂直180°
+            h_out = w_out_   # 對應垂直180°
             output_img = np.zeros((h_out, w_out, 3), dtype=np.uint8)
             
             # === 為每個像素計算其對應的經緯度（lon, lat） ===
-            lon = np.linspace(0, 2*np.pi, w_out)        # 方位角 [-180°, 180°]
+            lon = np.linspace(np.pi/2, (np.pi+np.pi/2), w_out)  # 方位角 [-90°,90°]範圍(180°)
             lat = np.linspace(np.pi / 2, -np.pi / 2, h_out)  # 仰角 [90°, -90°]
             lon_map, lat_map = np.meshgrid(lon, lat)
             
