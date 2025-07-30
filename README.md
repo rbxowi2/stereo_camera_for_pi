@@ -30,7 +30,7 @@ capture_/
         ├── raw_ram.py                    # [Pi] 使用記憶體緩衝錄製 raw 影像 / Record raw using RAM buffer
         ├── raw_viewer.py                 # [PC] 播放 raw 檔 / Play raw files
     stereo_raw/                            
-        ├── rectification_2mp4.py         # [PC] 校正後輸出 mp4 / rectified and output mp4 
+        ├── rectification_2mp4.py         # [PC] 校正後輸出 mp4 / Rectified and output mp4 
         ├── rectification_dp_2mp4.py      # [PC] 顯示深度圖並輸出 mp4 /Convert to depth map and output mp4
         ├── rectification_sph_2mp4.py     # [PC] 轉換為等距柱狀投影並輸出 mp4 /Convert to equirectangular projection and output mp4 
         ├── stereo_raw_viewer.py          # [PC] 播放 stereo raw / Play stereo raw files
@@ -49,9 +49,9 @@ tcp_calib/
     stereo/
         ├── tcp_stereo_calib.py           # [PC] 雙魚眼 stereo 校正 / Stereo calibration with two fisheye lenses
         rectification/
-            ├── tcp_rectification.py          # [PC] 顯示 stereo 校正後影像 / View stereo rectified images
-            ├── tcp_rectification_dp.py       # [PC] 生成並顯示深度圖 / view depth map
-            ├── tcp_rectification_dp_2pointcloud.py  # [PC] 生成並輸出點雲 / view depth map and export point clouds
+            ├── tcp_rectification.py          # [PC] 顯示 stereo 校正後影像 / View stereo rectified
+            ├── tcp_rectification_dp.py       # [PC] 生成並顯示深度圖 / View depth map
+            ├── tcp_rectification_dp_2pointcloud.py  # [PC] 生成並輸出點雲 / View depth map and export point clouds
             warp2sph/
                 ├── tcp_rectification_sph.py     # [PC] 轉換為等距柱狀投影 / Convert to equirectangular projection
 
