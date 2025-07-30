@@ -49,9 +49,9 @@ tcp_calib/
     stereo/
         ├── tcp_stereo_calib.py           # [PC] 雙魚眼 stereo 校正 / Stereo calibration with two fisheye lenses
         rectification/
-            ├── tcp_rectification_dp_2pointcloud.py # [PC] 生成並輸出點雲 / Generate and export point clouds
-            ├── tcp_rectification_dp.py       # [PC] 生成並顯示深度圖 / Generate and view depth maps
             ├── tcp_rectification.py          # [PC] 顯示 stereo 校正後影像 / View stereo rectified images
+            ├── tcp_rectification_dp.py       # [PC] 生成並顯示深度圖 / view depth maps
+            ├── tcp_rectification_dp_2pointcloud.py  # [PC] 生成並輸出點雲 / view depth maps and export point clouds
             warp2sph/
                 ├── tcp_rectification_sph.py     # [PC] 轉換為等距柱狀投影 / Convert to equirectangular projection
 
