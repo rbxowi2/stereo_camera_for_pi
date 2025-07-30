@@ -8,10 +8,6 @@ cv2.namedWindow("Rectified", cv2.WINDOW_NORMAL)
 cv2.namedWindow("combined_s",cv2.WINDOW_NORMAL)
 
 w_out_ = 3000  # 對應水平解析度180°
-        
-#主點偏移修正
-shift_=True
-# shift_=False
 
 # ====== 參數與網路設定 ======
 stereo_param_file = "stereo_camera_params.npz"
