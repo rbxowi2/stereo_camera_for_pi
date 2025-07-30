@@ -7,7 +7,7 @@ import math
 cv2.namedWindow("Rectified", cv2.WINDOW_NORMAL)
 cv2.namedWindow("combined_s",cv2.WINDOW_NORMAL)
 
-w_out_ = 3000  # 對應水平解析度360°  垂直解析度=水平解析度/2  <<注意>>是對應水平360度 不是crop的180度
+w_out_ = 3000  # 對應水平解析度180°
         
 #主點偏移修正
 shift_=True
@@ -157,7 +157,7 @@ try:
             h_in, w_in =l_image.shape[:2]
             
             # === 目標 equirectangular 影像大小（可依需求調整） ===
-            w_out = w_out_  # 對應水平360°
+            w_out = w_out_  # 對應水平180°
             h_out = w_out_   # 對應垂直180°
             output_img = np.zeros((h_out, w_out, 3), dtype=np.uint8)
             
