@@ -4,7 +4,7 @@ import cv2
 import threading
 import os
 import time
-# cv2.namedWindow("123", cv2.WINDOW_NORMAL)
+cv2.namedWindow("view", cv2.WINDOW_NORMAL)
 # 全域狀態變數
 running = True
 save_flag = False
@@ -195,7 +195,7 @@ try:
 
             cv2.drawChessboardCorners(gray[:, :frame_width], CHECKERBOARD, corners2_l, ret_l)
             cv2.drawChessboardCorners(gray[:, frame_width:], CHECKERBOARD, corners2_r, ret_r)
-        cv2.imshow("v", gray)
+        cv2.imshow("view", gray)
         key = cv2.waitKey(1) & 0xFF
         #time.sleep(0.01)
 
