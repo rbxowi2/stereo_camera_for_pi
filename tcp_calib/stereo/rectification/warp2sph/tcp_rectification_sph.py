@@ -13,10 +13,6 @@ w_out_ = 3000  # 對應水平解析度180°
 shift_=True
 # shift_=False
 
-#主點偏移修正 -黑邊剪裁
-# crop_ = True
-# crop_ = False
-
 # ====== 參數與網路設定 ======
 stereo_param_file = "stereo_camera_params.npz"
 server_ip = "192.168.200.42"
