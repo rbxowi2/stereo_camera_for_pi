@@ -265,6 +265,7 @@ try:
             b_point = 0
             b_point_temp = 0
             save_idx = 0
+            frames_timestamp.clear()
             
             print("{} recording...".format(dirpath))
             ### set led on
