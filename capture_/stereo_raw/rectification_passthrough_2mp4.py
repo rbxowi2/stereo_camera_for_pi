@@ -29,7 +29,7 @@ inpaint_radius = 3
 
 # StereoSGBM 參數（可依情況微調）
 minDisparity = 0
-numDisparities = 32  # 必須是 16 的倍數
+numDisparities = 64  # 必須是 16 的倍數
 blockSize = 1
 
 # ---------- 檢查檔案 ----------
@@ -85,6 +85,9 @@ P1[0,2] = DIM2[0] / 2.0
 P1[1,2] = DIM2[1] / 2.0
 P2[0,2] = DIM2[0] / 2.0
 P2[1,2] = DIM2[1] / 2.0
+
+Q[0, 3] = -DIM2[0]/2 
+Q[1, 3] = -DIM2[1]/2
 
 map1_l, map2_l = cv2.fisheye.initUndistortRectifyMap(K_l, D_l, R1, P1, DIM2, cv2.CV_16SC2)
 map1_r, map2_r = cv2.fisheye.initUndistortRectifyMap(K_r, D_r, R2, P2, DIM2, cv2.CV_16SC2)
