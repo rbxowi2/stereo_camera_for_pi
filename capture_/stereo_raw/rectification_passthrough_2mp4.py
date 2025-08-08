@@ -24,7 +24,7 @@ target_eye_relief_mm = 15.0
 
 # 是否對 remapped 結果做 inpaint（洞補）
 # hole_inpaint = True
-hole_inpaint = None
+hole_inpaint = False
 inpaint_radius = 3
 
 # StereoSGBM 參數（可依情況微調）
@@ -52,22 +52,12 @@ T = data["T"]
 DIM = tuple(data["DIM"])
 DIM = (int(DIM[0]), int(DIM[1]))
 
-# 判斷 T 的尺度 (若 T 很小 <1，可能是以公尺為單位；若大於 1，可能是 mm)
 T_norm = np.linalg.norm(T)
-# if T_norm > 1.0:
-    # # 很可能 T 的單位為 mm 或其他大於公尺的單位
-    # calib_unit = "mm"
-# else:
-    # calib_unit = "m"
 calib_unit = "mm"
 
 print(f"Calibration baseline norm = {T_norm:.6f} ({calib_unit})")
 
-# 若使用 mm，將 target 轉為相同單位數值（保持一致）
-if calib_unit == "mm":
-    target_eye_relief = target_eye_relief_mm  # mm
-else:
-    target_eye_relief = target_eye_relief_mm / 1000.0  # 轉為 m
+target_eye_relief = target_eye_relief_mm  # mm
 
 # ---------- stereo rectify（fisheye） ----------
 # 中介解析度 (rectified 用)
@@ -173,7 +163,7 @@ for idx, raw_file in enumerate(raw_files):
     # reproject to 3D (使用 Q)
     # Q 來自 stereoRectify，注意 reprojectImageTo3D 的輸入尺度與 Q 的單位需一致
     points_3d = cv2.reprojectImageTo3D(disp_filtered, Q)  # shape (h_in, w_in, 3)
-    # 勿將整個 points_3d 複製到高解析度（會爆記憶體），我們將用 map_x_basic/map_y_basic 直接 sample depth (Z)
+    # 勿將整個 points_3d 複製到高解析度（會爆記憶體），用 map_x_basic/map_y_basic 直接 sample depth (Z)
     depth_map = points_3d[..., 2]  # Z (單位與 T 相同)
 
     # sample depth 到 equirect（使用 map_x_basic/map_y_basic）
