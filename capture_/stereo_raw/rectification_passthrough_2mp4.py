@@ -28,7 +28,7 @@ hole_inpaint = False
 inpaint_radius = 3
 
 # StereoSGBM 參數（可依情況微調）
-minDisparity = 0
+minDisparity = 1
 numDisparities = 64  # 必須是 16 的倍數
 blockSize = 1
 
@@ -245,3 +245,4 @@ if init_VideoWriter and video_out.isOpened():
 cv2.destroyAllWindows()
 elapsed = time.time() - start_time
 print(f"\n完成，總耗時: {elapsed:.1f}s，輸出: {output_video_path}")
+
