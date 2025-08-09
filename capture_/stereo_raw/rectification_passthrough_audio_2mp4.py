@@ -51,7 +51,7 @@ def parse_txt_timestamps(txt_path):
 
     # 幀時間戳列表
     frame_times = []
-    for line in lines[3:]:  # 從第四行開始為幀時間戳
+    for line in lines[2:]:  # 從第三行開始為幀時間戳
         parts = line.strip().split()
         if len(parts) == 2:
             # 格式: "00000 2025-08-04T16:04:11.623"
@@ -260,7 +260,6 @@ for idx, current_time in enumerate(frame_times):
         else:
             display_img = combined_s
         
-        prev_frame = display_img.copy()
     else:
         if prev_frame is not None:
             print(f"⚠️ {raw_file} 不存在，使用上一幀補幀")
@@ -284,6 +283,8 @@ for idx, current_time in enumerate(frame_times):
             print(f"🔁 掉幀補幀 {num_missing} 幀: {prev_time} -> {current_time}")
     
     video_writer.write(display_img)
+
+    prev_frame = display_img.copy()
     prev_time = current_time
     
     cv2.imshow("combined_f", display_img)
