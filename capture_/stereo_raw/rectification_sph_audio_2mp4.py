@@ -35,7 +35,7 @@ def parse_txt_timestamps(txt_path):
 
     # 幀時間戳列表
     frame_times = []
-    for line in lines[3:]:  # 從第四行開始為幀時間戳
+    for line in lines[2:]:  # 從第三行開始為幀時間戳
         parts = line.strip().split()
         if len(parts) == 2:
             # 格式: "00000 2025-08-04T16:04:11.623"
@@ -80,8 +80,8 @@ P1[1, 2] = DIM2[1] / 2
 P2[0, 2] = DIM2[0] / 2
 P2[1, 2] = DIM2[1] / 2
 
-# Q[0, 3] = -K_l[0, 2]  # 新的主點位置
-# Q[1, 3] = -K_l[1, 2]
+#Q[0, 3] = -DIM2[0]/2
+#Q[1, 3] = -DIM2[1]/2
 
 map1_l, map2_l = cv2.fisheye.initUndistortRectifyMap(K_l, D_l, R1, P1, DIM2, cv2.CV_16SC2)
 map1_r, map2_r = cv2.fisheye.initUndistortRectifyMap(K_r, D_r, R2, P2, DIM2, cv2.CV_16SC2)
@@ -190,7 +190,6 @@ for idx, current_time in enumerate(frame_times):
         
         combined_s = np.hstack((res_l, res_r))
         
-        prev_frame = combined_s.copy()
     else:
         if prev_frame is not None:
             print(f"⚠️ {raw_file} 不存在，使用上一幀補幀")
@@ -213,6 +212,8 @@ for idx, current_time in enumerate(frame_times):
             print(f"🔁 掉幀補幀 {num_missing} 幀: {prev_time} -> {current_time}")
 
     video_writer.write(combined_s)
+
+    prev_frame = combined_s.copy()
     prev_time = current_time
 
 
