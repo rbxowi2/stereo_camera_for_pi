@@ -33,7 +33,7 @@ def parse_txt_timestamps(txt_path):
 
     # 幀時間戳列表
     frame_times = []
-    for line in lines[3:]:  # 從第四行開始為幀時間戳
+    for line in lines[2:]:  # 從第3行開始為幀時間戳
         parts = line.strip().split()
         if len(parts) == 2:
             # 格式: "00000 2025-08-04T16:04:11.623"
@@ -119,7 +119,7 @@ for idx, current_time in enumerate(frame_times):
         rect_l = cv2.remap(frame_l, map1_l, map2_l, interpolation=cv2.INTER_LINEAR)
         rect_r = cv2.remap(frame_r, map1_r, map2_r, interpolation=cv2.INTER_LINEAR)
         combined = np.hstack((rect_l, rect_r))
-        prev_frame = combined.copy()
+        
     else:
         if prev_frame is not None:
             print(f"⚠️ {raw_file} 不存在，使用上一幀補幀")
@@ -142,6 +142,7 @@ for idx, current_time in enumerate(frame_times):
             print(f"🔁 掉幀補幀 {num_missing} 幀: {prev_time} -> {current_time}")
 
     video_writer.write(combined)
+    prev_frame = combined.copy()
     prev_time = current_time
 
     # 畫面輔助線
